@@ -10,6 +10,7 @@
   --text-on-image: rgba(47, 48, 58, 0.8);
   --time-for-hover: 250ms;
   --timing-fuktion: cubic-bezier(0.4, 0, 0.2, 1);
+  --color-text-form: rgb(117, 117, 117);
 }
 
 body {
@@ -421,8 +422,8 @@ div.container-header {
 .form-head-text {
   font-family: Roboto;
 
-  margin-bottom: 12px;
-  margin-top: 40px;
+  padding-bottom: 12px;
+  padding-top: 40px;
 
   font-weight: 700;
   font-size: 20px;
@@ -434,8 +435,8 @@ div.container-header {
 }
 
 .modal-form {
-  margin-right: 40px;
-  margin-left: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .form-field {
@@ -550,17 +551,22 @@ textarea {
 
 .form-chekbox {
   display: flex;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
 
-  color: rgb(0, 0, 0);
+  letter-spacing: 0.03em;
+
+  color: rgb(117, 117, 117);
 }
 
 .form-agree {
   display: flex;
 
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   margin-right: 52px;
   margin-left: 52px;
-  margin-bottom: 30px;
 
   font-weight: 400;
   font-size: 14px;
@@ -568,7 +574,7 @@ textarea {
 
   letter-spacing: 0.03em;
 
-  color: #757575;
+  color: rgb(117, 117, 117);
 }
 
 .form-checkbox:checked + .checkbox-castom {
@@ -609,6 +615,7 @@ textarea {
 .form-button {
   margin-right: 164px;
   margin-left: 164px;
+  margin-bottom: 40px;
   padding-left: 56px;
 
   width: 200px;
@@ -937,7 +944,7 @@ textarea {
 
 .progects-link:hover,
 .progects-link:focus {
-  background-color: #ffffff;
+  background-color: var(--white-color);
 
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1145,7 +1152,7 @@ textarea {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .footer-container-form {
