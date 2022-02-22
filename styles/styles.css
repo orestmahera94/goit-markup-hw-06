@@ -70,6 +70,19 @@ div.container-header {
   padding-bottom: 94px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* ------------------------------- ХЕДЕР---- */
 
 .header {
@@ -336,7 +349,7 @@ div.container-header {
   color: var(--white-color);
   background-color: var(--background-botton-color);
 }
-/* -----------MODAL WINDOW */
+/* ------------------------MODAL WINDOW */
 .backdrop {
   position: fixed;
   top: 0;
@@ -379,6 +392,15 @@ div.container-header {
   background-color: var(--white-color);
 }
 
+.button-modal-close:hover .icon-close,
+.button-modal-close:focus .icon-close {
+  fill: var(--background-botton-color);
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: fill;
+}
+
 .icon-close {
   position: absolute;
   justify-content: center;
@@ -387,6 +409,198 @@ div.container-header {
   left: 5px;
   width: 18px;
   height: 18px;
+}
+
+/* ---------------------------modal form */
+.form-head-text {
+  font-family: Roboto;
+
+  margin-bottom: 12px;
+  margin-top: 40px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+.modal-form {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.form-field input {
+  margin-top: 4px;
+  padding-left: 42px;
+  width: 448px;
+  height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-field input:hover,
+.form-field input:focus {
+  border-color: var(--background-botton-color);
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: border-color;
+}
+
+.form-field:hover .modal-icon,
+.form-field:focus .modal-icon {
+  fill: var(--background-botton-color);
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: fill;
+}
+
+.form-field textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-fild-name {
+  padding-bottom: 4px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+textarea {
+  resize: none;
+  width: 448px;
+  height: 120px;
+}
+
+.modal-icon {
+  position: absolute;
+
+  top: 33px;
+  left: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+/* .modal-icon-person {
+  top: 35px;
+}
+
+.modal-icon-phone {
+  top: 105px;
+}
+
+.modal-icon-email {
+  top: 178px;
+} */
+.form-textarea {
+  margin-top: 5px;
+
+  padding-top: 12px;
+  padding-left: 16px;
+
+  font-weight: normal;
+  font-size: 12px;
+
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-chekbox {
+  display: flex;
+
+  color: rgb(0, 0, 0);
+}
+
+.form-agree {
+  display: flex;
+
+  margin-top: 20px;
+  margin-right: 52px;
+  margin-left: 52px;
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.form-checkbox:checked + .checkbox-castom {
+  background-color: var(--background-botton-color);
+  border-color: var(--background-botton-color);
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: background-color, border-color;
+}
+
+.checkbox-castom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 7px;
+  margin-top: 5px;
+  width: 16px;
+  height: 15px;
+
+  background-image: url(../image/icon/icon-check.svg);
+  background-position: center;
+  background-size: cover;
+  border: 2px solid var(--body-text-color);
+  border-radius: 2px;
+}
+
+.checkbox-castom-icon {
+  fill: transparent;
+}
+
+.form-checkbox-text-bly {
+  text-decoration: underline;
+  color: var(--background-botton-color);
+}
+.form-button {
+  margin-right: 164px;
+  margin-left: 164px;
+  padding-left: 56px;
+
+  width: 200px;
+  height: 50px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+
+  display: flex;
+  align-items: center;
+
+  letter-spacing: 0.06em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  color: var(--white-color);
+  background-color: var(--background-botton-color);
 }
 /* --------------------------what we do  */
 
@@ -826,6 +1040,7 @@ div.container-header {
   height: 44px;
   border-radius: 50%;
 }
+
 .person-link {
   display: flex;
   justify-content: center;
@@ -840,6 +1055,7 @@ div.container-header {
   transition-timing-function: var(--timing-fuktion);
   transition-property: background-color;
 }
+
 .person-link:hover,
 .person-link:active {
   background-color: var(--background-botton-color);
@@ -869,11 +1085,84 @@ div.container-header {
 }
 
 .footer-background-color {
-  z-index: 1;
-
   background-color: var(--footer-background-color);
 }
 
 .back-color {
   background-color: var(--background-botton-color);
+}
+
+.button-email-footer {
+  width: 358px;
+  height: 50px;
+  left: 815px;
+  top: 2787px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  border-radius: 4px;
+}
+
+.footer-form {
+  margin-left: 93px;
+  background-color: var(--footer-background-color);
+}
+
+.footer-text-form {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.footer-container-form {
+  display: flex;
+}
+.footer-input-email {
+  margin-right: 12px;
+
+  width: 358px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  background-color: var(--footer-background-color);
+}
+
+.footer-button-form {
+  display: flex;
+
+  width: 200px;
+  height: 50px;
+
+  background-color: var(--background-botton-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  color: var(--white-color);
+}
+.footer-icon-send {
+  margin-top: 10px;
+
+  width: 24px;
+  height: 24px;
+  fill: var(--white-color);
+}
+
+.footer-subscribe {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  width: 109px;
+  height: 30px;
 }
