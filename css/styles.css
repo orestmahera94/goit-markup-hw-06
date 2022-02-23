@@ -1158,6 +1158,7 @@ textarea {
 .footer-container-form {
   display: flex;
 }
+
 .footer-input-email {
   margin-right: 12px;
   padding-left: 15px;
@@ -1186,6 +1187,7 @@ textarea {
 
   color: var(--white-color);
 }
+
 .footer-icon-send {
   margin-top: 10px;
 
